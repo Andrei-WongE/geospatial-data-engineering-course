@@ -119,7 +119,7 @@ set geometry = ST_Transform(ST_MakeValid(geometry), 'EPSG:2926', 'EPSG:4326')
 
 sedona.sql(f'''
 update org_catalog.{database}.wildfires_bronze
-set geometry = ST_Transform(ST_MakeValid(geometry), 'EPSG:4326')
+set geometry = ST_Transform(ST_MakeValid(geometry), 'ESRI:102008', 'EPSG:4326')
 ''')
 
 
